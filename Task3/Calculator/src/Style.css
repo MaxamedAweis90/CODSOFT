@@ -1,0 +1,127 @@
+.body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161627e1;
+
+    --gap: 10em;
+    --line: 3px;
+    --color: rgba(20, 255, 255, 2);
+  
+    background-image: linear-gradient(
+        -48deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+    background-attachment: fixed;
+    background-position: 0 0;
+}
+
+
+.calculator {
+    border: 1rem rgb(27, 134, 32) solid;
+    padding: 70px;
+    border-radius: 10px;
+    background-color: yellow;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+  }
+  
+  .calculator h1 {
+    font-size: 3rem;
+    color: rgb(105, 105, 33);
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  form input {
+    border: none;
+    border-radius: 50%;
+    outline: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+    background-color: #18181be1;
+    color: wheat;
+    cursor: pointer;
+    font-weight: bolder;
+    margin: 3px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  form input[type="button"]:hover {
+    background-color: #18181bbb;
+    font-size: 14px;
+  }
+  
+  form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 0px 15px 0px;
+  }
+  
+  form .display input {
+    text-align: right;
+    flex: 1;
+    border-radius: 5%;
+    font-size: 50px;
+    padding: 60px 10px;
+    background-color: rgb(64, 64, 64);
+  }
+  
+  form input.equal {
+    background-color: #6e5353;
+  }
+  
+  form input.equal:hover {
+    background-color: #6e5353c9;
+  }
+  
+  @media (max-width: 768px) {
+    .calculator {
+      border: none;
+      width: 100vw;
+      height: 100vh;
+      padding: 20px;
+    }
+  
+
+  
+    form input {
+        width: 100px;
+        height: 100px;
+        font-size: 2.7rem;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+
+    form input[type="button"]:hover {
+        background-color: #18181bbb;
+        font-size: 2.8rem;
+      }
+      
+  
+    form .display input {
+      font-size: 55px; /* Slightly smaller font for display */
+      padding: 40px 8px;
+    }
+  
+    form input.equal {
+      grid-column: span 2; /* Adjust the equals button to span two columns */
+    }
+  }
+  
