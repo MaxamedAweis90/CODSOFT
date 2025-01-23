@@ -116,12 +116,12 @@
       
   
     form .display input {
-      font-size: 55px; /* Slightly smaller font for display */
+      font-size: 55px; 
       padding: 40px 8px;
     }
   
     form input.equal {
-      grid-column: span 2; /* Adjust the equals button to span two columns */
+      grid-column: span 2; 
     }
   }
   
