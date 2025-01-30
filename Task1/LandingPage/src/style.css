@@ -1033,7 +1033,7 @@ footer {
   }
 
   .navbar img {
-    width: 120px; /* Adjust navbar image size for smaller screens */
+    width: 120px;
   }
 
   .contact .contact-grid {
@@ -1043,19 +1043,19 @@ footer {
   }
 
   .social-media {
-    width: 100%; /* Make social media section full-width */
+    width: 100%; 
     margin-top: 10px;
   }
 
   .social-links a {
-    font-size: 0.9rem; /* Adjust social link font size for mobile */
+    font-size: 0.9rem;
   }
 
   .nav-links {
     position: fixed;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.379);
     top: 0;
-    left: -250px; /* Initially hide the menu off-screen */
+    left: -250px;
     background-color: #4e54c8;
     height: 100%;
     width: 250px;
@@ -1079,7 +1079,7 @@ footer {
   }
 
   .nav-links.active {
-    left: 0; /* Slide in from the left */
+    left: 0; 
   }
 
   .hamburger-btn {
