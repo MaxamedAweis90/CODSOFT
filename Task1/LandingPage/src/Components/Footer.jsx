@@ -4,17 +4,14 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+        <div className="footer-info">
+          <p>&copy; 2025 LandingPage. All rights reserved. &nbsp;</p>
+          <h4>Dev:&nbsp; <a href="https://engaweis.netlify.app/" target="_blank" rel="noopener noreferrer">Eng-Aweis</a></h4>
+        </div>
         <ul className="footer-links">
-          <li>
-            <a href="#privacy">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#terms">Terms of Service</a>
-          </li>
-          <li>
-            <a href="#contact">Contact Us</a>
-          </li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
     </footer>

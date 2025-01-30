@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
           
           {/* Right Section: Text Content */}
-          <div>
+          <div className="hero-info">
             <h1>Welcome to Our Landing Page</h1>
             <p>We offer top-notch solutions tailored to drive your business forward.</p>
             <p>Our team of experts is here to help you achieve your goals with innovative strategies.</p>

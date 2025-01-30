@@ -35,18 +35,18 @@ const AboutUs = () => {
           </p>
           <ul className="points">
             <li>
-              <FaCheckCircle className="icon" />
-              <strong>High-quality services:</strong> Every solution we offer is
+              
+              <strong><FaCheckCircle className="icon" />&nbsp;&nbsp;High-quality services:</strong> Every solution we offer is
               crafted with precision and attention to detail.
             </li>
             <li>
-              <FaCheckCircle className="icon" />
-              <strong>Dedicated professionals:</strong> Our team is committed to
+              
+              <strong><FaCheckCircle className="icon" />&nbsp;&nbsp;Dedicated professionals:</strong> Our team is committed to
               understanding and addressing your unique needs.
             </li>
             <li>
-              <FaCheckCircle className="icon" />
-              <strong>Customized solutions:</strong> Tailored strategies to help
+              
+              <strong><FaCheckCircle className="icon" />&nbsp;&nbsp;Customized solutions:</strong> Tailored strategies to help
               your business achieve its full potential.
             </li>
           </ul>

@@ -186,7 +186,7 @@ p {
 
 /* For Hamburger Menu */
 .nav-links.active {
-  transform: translateX(0); /* Show the menu */
+  transform: translateX(0);
 }
 
 .nav-links {
@@ -270,13 +270,105 @@ p {
 }
 
 
-/* Footer */
+/* Footer Styles */
 footer {
-  background: #333;
+  background: #222;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info h5 {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-info h4 a {
+  text-decoration: none;
+  color: #0cf149;
+  font-size: 16px;
+}
+
+.footer-info h4 a:hover {
+  color: #66c0ff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #66c0ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-info p {
+    font-size: 14px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+}
+
 
 /* Hero Section */
 .hero {
@@ -383,6 +475,25 @@ footer {
   background: #d8baba;
 }
 
+@media (max-width: 768px) {
+  
+  .hero .HeroWrapper .container {
+    height: 30vh;
+    max-height: none;
+  }
+
+  .hero .hero-info{
+    margin-top: 2rem;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .hero-image {
+    position: relative;
+    margin-top: 2rem;
+  }
+}
+
 
 /* Progress Section */
 .progress {
@@ -435,29 +546,40 @@ footer {
   color: #ddd;
 }
 
+@media (max-width: 768px) {
+  .progress{
+    max-height: none;
+    margin-top: 2rem;
+  }
 
+  .progress .counter{
+    flex-direction: column;
+  }
+}
 
 /* About Section */
 .about {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 40px 20px;
   max-height: 1200px;
+  background: #f9f9f9;
 }
 
 .about-content {
   display: flex;
   justify-content: center;
-  text-align: left;
   align-items: center;
+  text-align: left;
   width: 100%;
   max-width: 1200px;
+  gap: 20px;
 }
 
-/* About Section */
+/* About Image */
 .about-image {
   position: relative;
   max-width: 650px;
@@ -465,85 +587,85 @@ footer {
 
 .image {
   object-fit: cover;
-  width: 100%; 
-  max-width: 650px; 
+  width: 100%;
+  max-width: 650px;
   height: 450px;
+  border-radius: 10px;
 }
 
 /* Floating Items */
 .floating-item {
   position: absolute;
-  background: rgba(255, 255, 255, 0.39);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 20%;
+  padding: 12px;
+  border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  animation: floatAnimation 3s ease-in-out infinite; 
+  width: 55px;
+  height: 55px;
+  animation: floatAnimation 3s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
 
 .floating-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .tech-icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #007bff;
 }
 
 /* Positioning Floating Items */
 .top-left {
-  top: 10%;
-  left: 10%;
-  animation-delay: 0s; 
+  top: 12%;
+  left: 8%;
 }
 
 .bottom-left {
-  bottom: 10%;
-  left: 10%;
-  animation-delay: 1s; 
+  bottom: 12%;
+  left: 8%;
 }
 
 .right-middle {
   top: 40%;
-  right: 10%;
-  animation-delay: 2s;  
+  right: 8%;
 }
 
 @keyframes floatAnimation {
   0% {
-    transform: translateY(0); 
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   100% {
     transform: translateY(0);
   }
 }
 
-
+/* About Text */
 .about-text {
-
+  flex: 1;
 }
 
 .about h1 {
   color: #1f2122;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .about-text p {
-  color: #007bff;
+  color: #333;
   margin-bottom: 20px;
   font-size: 1.1rem;
   line-height: 1.6;
-  text-wrap-mode:wrap ;
 }
 
+/* Text Wrapper */
 .textwrapper {
   display: flex;
   flex-direction: row;
@@ -553,27 +675,92 @@ footer {
 
 .textwrapper span {
   display: block;
-  height: 220px;
+  height: 235px;
   margin-right: 10px;
   border: 3px solid #dd9b0b;
 }
 
+/* Points Section */
 .points {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  padding: 0;
+  padding: 10px;
 }
 
 .points li {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 15px;
 }
 
-.icon {
-  color: #007bff; 
-  font-size: 1.5rem;
-  margin-right: 10px;
+.points strong {
+  display: block;
+  font-weight: bold;
+  color: #007bff;
 }
+
+/* Icons */
+.icon {
+  color: #007bff;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .textwrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textwrapper span {
+    display: none;
+  }
+}
+.points strong{
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .points {
+    padding: 0;
+  }
+
+  .points strong{
+    display: flex;
+    align-items: center;
+  }
+  .points li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon {
+    margin-bottom: 5px;
+  }
+}
+
 
 /* Service Section */
 .services {
@@ -713,8 +900,8 @@ footer {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, #a71515, #62637c);
-
-}
+  max-height: 1200px;
+} 
 
 .contact-grid {
   display: flex;
@@ -785,7 +972,7 @@ footer {
   background: #0a1d63;
 }
 
-/* Right Section: Map */
+
 .contact-map {
   flex: 1;
   background: #081A51;
@@ -802,16 +989,7 @@ footer {
   border: none;
 }
 
-/* Middle Divider */
-.divider {
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  bottom: 10%;
-  width: 5px;
-  background: white;
-  transform: translateX(-50%);
-}
+
 
 /* Responsive: Stack on small screens */
 @media (max-width: 768px) {
@@ -819,25 +997,34 @@ footer {
     display: none;
   }
   section {
-    height: 100%; /* Adjusting height for mobile */
+    height: 100%; 
   }
 
-  .hero .HeroWrapper {
-    max-height: none; /* Allow content to flow naturally on small screens */
+
+  .container{
+    
   }
 
-  .about, .services {
+  .hero .HeroWrapper .container {
+    height: 100%;
+    max-height: none;
+    flex-direction: column-reverse;
+
+  }
+
+  .about, .services, .team, .contact {
     padding: 30px 10px;
-    height: 100%; /* Adjust padding for mobile screens */
+    max-height: none;
+    height: 100%;
   }
 
   .about-image .image {
-    height: 100%; /* Allow image to resize according to content */
+    height: 100%; 
   }
 
   .progress {
-    height: 100%; /* Remove fixed height for progress section */
-    max-height: none; /* Allow content to flow naturally */
+    height: 100%; 
+    max-height: none;
   }
 
   .tabe-container {
@@ -849,8 +1036,10 @@ footer {
     width: 120px; /* Adjust navbar image size for smaller screens */
   }
 
-  .contact-info {
-    flex-direction: column; /* Stack contact info vertically on mobile */
+  .contact .contact-grid {
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
   }
 
   .social-media {

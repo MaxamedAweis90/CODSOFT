@@ -38,8 +38,7 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
 
-              {/* Middle Divider */}
-              <div className="divider"></div>
+            
             </div>
           </div>
         </div>

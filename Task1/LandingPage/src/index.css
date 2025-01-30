@@ -27,23 +27,23 @@ img {
   display: block;
 }
 
-/* General Container Styling */
+
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Centers the container */
-  padding: 0 20px; /* Horizontal padding */
-  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; 
 }
 
 
 
 
-
-/* For smaller screens, keep content within bounds */
 @media (max-width: 768px) {
   .container {
-    padding: 0 15px; /* Less padding for mobile */
+    padding: 0 15px; 
+    height: 100%;
+    max-height: none;
   }
 }
 
