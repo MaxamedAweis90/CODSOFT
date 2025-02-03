@@ -1,0 +1,55 @@
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #efd8d8;
+    color: #333;
+}
+
+.footer-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons .icons {
+    font-size: 24px;
+    color: #861818;
+    transition: color 0.3s ease;
+}
+
+.social-icons .icons:hover {
+    color: #1abc9c;
+}
+
+/* Rights & Developer */
+.rights,
+.developer {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.dark-mode .developer a{
+    color: yellow;
+}
+
+.dark-mode .footer{
+    background: rgba(1, 1, 54, 0.66);
+}
+
+
+
+
+.dark-mode .rights,
+.dark-mode .developer {
+    color: #bbb;
+}

@@ -1,0 +1,179 @@
+/* General Styles */
+.resume-container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.resume-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Timeline Container */
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+/* Common Timeline Styles */
+.timeline {
+    width: 45%;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Timeline Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #1abc9c;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Timeline Dot */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: #1abc9c;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Timeline Titles */
+.timeline-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Text Styles */
+.timeline-year {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+.timeline-degree,
+.timeline-position {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.timeline-school,
+.timeline-company {
+    font-size: 16px;
+    color: #777777;
+}
+
+/* Experience Timeline Alignment */
+.experience {
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.experience .timeline-item::before {
+    left: auto;
+    left: -30px;
+}
+
+.experience::before {
+    left: auto;
+    left: -24px;
+}
+
+/* Dark Mode */
+.dark-mode .timeline-item {
+    background: #2c3e50;
+    color: #fff;
+}
+
+.dark-mode .timeline-year {
+    color: #ddd;
+}
+
+.dark-mode .timeline-degree,
+.dark-mode .timeline-position {
+    color: #1abc9c;
+}
+
+.dark-mode .timeline-school,
+.dark-mode .timeline-company {
+    color: #bbb;
+}
+
+.dark-mode .timeline::before {
+    background-color: #1abc9c;
+}
+
+.dark-mode .timeline-item::before {
+    background-color: #1abc9c;
+}
+
+/* 📱 Mobile Styles (Stacked Layout) */
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline {
+        width: 90%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+
+
+    .timeline::before {
+        left: -25px;
+        transform: translateX(-50%);
+        width: 4px;
+    }
+
+    .timeline-item {
+        text-align: left;
+        width: 100%;
+ 
+    }
+
+    .timeline-item::before {
+        left: -25px;
+        transform: translateX(-50%);
+    }
+
+    /* Experience Timeline Alignment */
+
+.experience .timeline-item{
+    width: 100%;
+}
+
+.experience .timeline-item::before {
+    left: -25px;
+}
+
+.experience::before {
+    left: -25px;
+}
+}
